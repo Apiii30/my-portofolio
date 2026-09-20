@@ -1,0 +1,155 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    /* LIGHT MODE PALETTE: Crisp brutalist paper with bold contrasts (preserved as desired) */
+    --surface-canvas: #f4f5f8;
+    --bg-primary: #f4f5f8;
+    --bg-surface: #ffffff;
+    --bg-card: rgba(255, 255, 255, 0.94);
+    --bg-card-solid: #ffffff;
+    --bg-card-subtle: #f8f9fa;
+    --bg-terminal-header: #0f1115;
+    --bg-inset: #e8ecf2;
+    --text-primary: #0a0b0d;
+    --text-secondary: #21252d;
+    --text-muted: #4e5666;
+    --text-dim: #757f92;
+    --border-color: #0a0b0d;
+    --border-subtle: #c2c8d4;
+    --shadow-color: #0a0b0d;
+    --accent-lime: #aee000;
+    --accent-lime-fg: #192400;
+    --accent-cyan: #00bed6;
+    --accent-cyan-fg: #00373d;
+    --surface-glass: rgba(255, 255, 255, 0.90);
+    --surface-wire: #ffffff;
+    --input-bg: #ffffff;
+  }
+
+  .dark {
+    /* DARK MODE PALETTE: Deep jet-black obsidian canvas with sharp brutalist contrast */
+    --surface-canvas: #07080a;
+    --bg-primary: #07080a;
+    --bg-surface: #0d0f14;
+    --bg-card: rgba(15, 17, 23, 0.95);
+    --bg-card-solid: #101218;
+    --bg-card-subtle: #0b0c10;
+    --bg-terminal-header: #030406;
+    --bg-inset: #0e1117;
+    --text-primary: #f5f6f9;
+    --text-secondary: #e2e5ee;
+    --text-muted: #b4bac8;
+    --text-dim: #7d8494;
+    --border-color: #ffffff;
+    --border-subtle: #2a2e38;
+    --shadow-color: #ffffff;
+    --accent-lime: #c3f400;
+    --accent-lime-fg: #283500;
+    --accent-cyan: #00eefc;
+    --accent-cyan-fg: #00363a;
+    --surface-glass: rgba(8, 10, 14, 0.92);
+    --surface-wire: #07080a;
+    --input-bg: rgba(6, 7, 10, 0.96);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    overflow-x: hidden;
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+}
+
+.font-display {
+  font-family: 'Space Grotesk', -apple-system, sans-serif;
+}
+
+.font-mono-code {
+  font-family: 'Space Mono', monospace;
+}
+
+.font-body {
+  font-family: 'Hanken Grotesk', sans-serif;
+}
+
+/* Brutal-Glass Shadows */
+.brutal-shadow-sm {
+  box-shadow: 3px 3px 0px 0px var(--shadow-color);
+}
+
+.brutal-shadow-md {
+  box-shadow: 4px 4px 0px 0px var(--shadow-color);
+}
+
+.brutal-shadow-lg {
+  box-shadow: 6px 6px 0px 0px var(--shadow-color);
+}
+
+.brutal-shadow-accent {
+  box-shadow: 4px 4px 0px 0px var(--accent-lime);
+}
+
+.brutal-shadow-cyan {
+  box-shadow: 4px 4px 0px 0px var(--accent-cyan);
+}
+
+.glass-panel {
+  background: var(--surface-glass);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 26s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Hide horizontal scrollbar when requested */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-inset);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--accent-lime);
+  border-radius: 0px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-cyan);
+}
+
+/* Fine Tech Dot Matrix Canvas */
+.bg-tech-grid {
+  background-image: radial-gradient(var(--border-subtle) 1.5px, transparent 1.5px);
+  background-size: 28px 28px;
+}
+
