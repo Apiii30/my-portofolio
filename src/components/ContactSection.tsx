@@ -13,7 +13,7 @@ export default function ContactSection() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
 
-  const email = 'hafidz.asmar@dev.io';
+  const email = 'asmarhafidz81@gmail.com';
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(email);

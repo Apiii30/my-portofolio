@@ -1,4 +1,5 @@
 import { TechSkill, ProjectItem, CareerMilestone, EducationItem, CertificationItem } from '../types';
+import profileAvatar from '../assets/images/HafidzAsmar.jpeg';
 
 export const TECH_SKILLS: TechSkill[] = [
   {
@@ -259,8 +260,7 @@ export const CAREER_MILESTONES: CareerMilestone[] = [
   },
 ];
 
-export const PROFILE_AVATAR_URL =
-  'https://lh3.googleusercontent.com/aida-public/AB6AXuC7jnpQUJG-_Uu7v6vtDDSCsOtRefMh5EMY-YrsuR3jJ_rSWNBCxuaaE4imhiPx0u53cYhTtxI9emgaXRetDmyr8zs1yKui34t4xUYcF2H4WUEMLXLaovLmTVpUiPJOKZSaV0FSabzt0ey4d3vPBBCfJ7IGOmoiWlNw09g8sy-ti81VFHxx8d0EGtTvBQRTZhSQi6xiFmBr5lKQfh-_NNABDsC51cGA_VnZKqkeTHQms3wtK9rgJtvzLQ';
+export const PROFILE_AVATAR_URL = profileAvatar;
 
 export const EDUCATION_RECORDS: EducationItem[] = [
   {
